@@ -1,0 +1,37 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:     
+      - name: powerplatform-actions
+      - uses: microsoft/powerplatform-actions@0.5.2
+        with:
+          # URL of Power Platform environment to connect with; e.g. "https://test-env.crm.dynamics.com"
+          environment-url: "https://vakusher11.crm4.dynamics.com/" # optional
+          # Power Platform user name to authenticate with, e.g. myname@my-org.onmicrosoft.com. Setting this input makes user-name and password required; specifying alternate "app-id" credential set of inputs will result in an error.
+          app-id: "1bc1bcf9-4f21-48af-b315-1b39938f1974" # optional
+          # Power Platform password, required if authenticating with username. Do NOT checkin password, instead create a secret and reference it here with: see: https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets#using-encrypted-secrets-in-a-workflow
+          client-secret: ${{secrets.CLIENT_SECRET_GITHUB_ACTIONS}} # optional
+          tenant-id: "a5e3206a-631d-402c-bb2f-15aa28dc4caf"
+          
+  
+     
