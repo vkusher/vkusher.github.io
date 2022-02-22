@@ -30,7 +30,7 @@ jobs:
           # Power Platform user name to authenticate with, e.g. myname@my-org.onmicrosoft.com. Setting this input makes user-name and password required; specifying alternate "app-id" credential set of inputs will result in an error.
           app-id: "1bc1bcf9-4f21-48af-b315-1b39938f1974" # optional
           # Power Platform password, required if authenticating with username. Do NOT checkin password, instead create a secret and reference it here with: see: https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets#using-encrypted-secrets-in-a-workflow
-          client-secret: ${{secrets.CLIENT_SECRET_GITHUB_ACTIONS}} # optional
+          client-secret: "r_N7Q~Fn5m8f2Xi9HTl6s3e4h~eGQhddBtRQt" # optional
           tenant-id: "a5e3206a-631d-402c-bb2f-15aa28dc4caf"
           
   
