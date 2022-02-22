@@ -23,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:     
       - name: powerplatform-actions
-      - uses: microsoft/powerplatform-actions@0.5.2
+        uses: microsoft/powerplatform-actions@0.5.2
         with:
           # URL of Power Platform environment to connect with; e.g. "https://test-env.crm.dynamics.com"
           environment-url: "https://vakusher11.crm4.dynamics.com/" # optional
